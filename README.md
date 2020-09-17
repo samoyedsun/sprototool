@@ -1,2 +1,2 @@
 # sprototool
-windows下生成sproto二进制文件的工具
+LINUX下生成sproto二进制文件的工具
