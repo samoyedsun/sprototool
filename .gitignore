@@ -1,4 +1,5 @@
 *.so
+*.dSYM
 *.o
 *.a
 *.spt

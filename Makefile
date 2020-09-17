@@ -1,11 +1,10 @@
-LUA_CLIB_PATH ?= luaclib
-LUA_INC ?= lua53/src
-CC ?= gcc
+include platform.mk
 
-SHARED := -fPIC --shared
-CFLAGS = -g -O2 -Wall -I$(LUA_INC) $(MYCFLAGS)
+LUA_CLIB_PATH ?= luaclib
 LUA_CLIB = lpeg sproto lfs
-PLAT = linux
+LUA_INC ?= lua53/src
+
+CFLAGS = -g -O2 -Wall -I$(LUA_INC) $(MYCFLAGS)
 
 all : luabin \
 	$(foreach v, $(LUA_CLIB), $(LUA_CLIB_PATH)/$(v).so)
